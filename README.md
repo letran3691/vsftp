@@ -102,6 +102,10 @@ Chroot trên các hệ điều hành Unix là một công đoạn thay đổi th
 
 - Chúc các bạn thành công.
 
+- Tham khảo:
+
+    https://www.unixmen.com/install-vsftp-with-virtual-users-on-centos-rhel-scientific-linux-6-4/
+
 
        
         
