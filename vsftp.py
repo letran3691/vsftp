@@ -31,7 +31,7 @@ def create_use():
 
     print("Remember this info, it's account ftp")
 
-    with open('virtual_user.txt', 'a+') as user:
+    with open('/etc/vsftpd/virtual_user.txt', 'a+') as user:
         user.write(name + '\n')
         user.write(pas + '\n')
         user.close()
@@ -47,7 +47,7 @@ def quit():
 
     exit(0)
 
-print('Enter 1 to install vsftp')
+print('\nEnter 1 to install vsftp')
 print('Enter 2 to create user ftp')
 print('Enter 3 to exit\n')
 

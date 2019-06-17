@@ -33,7 +33,11 @@ make altinstall
 
 rm -f /usr/src/Python-3.6.8.tgz
 
-echo 'python3.6 -V'
+echo 'Install python3.6 done!!!'
+
+echo 'Function vsftp'
+
+sleep 4
 
 chmod -R +x /root/vsftp/*.py
 
