@@ -20,15 +20,15 @@ Chroot trên các hệ điều hành Unix là một công đoạn thay đổi th
 - Tiến hành cài đặt.
 
  
-    git clone https://github.com/letran3691/vsftp.git
+            git clone https://github.com/letran3691/vsftp.git
     
 - Phân quyên file         
     
-    chmod +x vsftp/installpython3.6.sh
+            chmod +x vsftp/installpython3.6.sh
     
 - Cài đặt python3.6
 
-    ./vsftp/installpython3.6.sh
+            ./vsftp/installpython3.6.sh
     
     
 - Sau khi cài đặt python xong file shell sẽ tự đông gọi đến file Python để cài VSFTP
@@ -50,6 +50,7 @@ Chroot trên các hệ điều hành Unix là một công đoạn thay đổi th
 
 - IP public sẽ được input vào file cấu hình.
     - Các bạn chú ý đến
+    
         - pasv_min_port: 
         
         - pasv_max_port:
