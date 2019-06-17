@@ -60,6 +60,8 @@ Chroot trên các hệ điều hành Unix là một công đoạn thay đổi th
 - Như vậy là cài đặt và cấu hình VSFTP đã xong.              
 
 - Giờ đến tạo user:
+            
+            ./vsftp/vsftp.py
     
     ![image](https://user-images.githubusercontent.com/19284401/59596153-5bb44580-9121-11e9-9ada-259b17277569.png)
     
