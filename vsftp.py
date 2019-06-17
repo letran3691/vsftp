@@ -34,7 +34,7 @@ def install():
 
 def create_use():
 
-    name = input('Enter username fpt: ')
+    name = input('Enter username ftp: ')
     pas = input('Enter password: ')
 
     print("\nRemember this info, it's account ftp")
