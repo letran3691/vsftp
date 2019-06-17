@@ -15,7 +15,7 @@ def install():
 
     os.system('mv /etc/vsftpd/vsftpd.conf  /etc/vsftpd/vsftpd.conf.bak')
 
-    os.system('cp vsftpd.conf /etc/vsftpd/')
+    os.system('cp /root/vsftp/vsftpd.conf /etc/vsftpd/')
     os.system('systemctl vsftpd restart')
 
 

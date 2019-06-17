@@ -35,15 +35,6 @@ rm -f /usr/src/Python-3.6.8.tgz
 
 echo 'python3.6 -V'
 
-chmod -R +x /root/samba-domain/*.py
+chmod -R +x /root/vsftp/*.py
 
-echo "Enter hostname: "
-read server
-
-echo $server > /etc/hostname
-
-echo 'install done!!! and reboot after 5s'
-
-sleep 5
-
-reboot now
+/root/vsftp/vsftp.py
