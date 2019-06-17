@@ -4,10 +4,10 @@ import os,fileinput,time
 def install():
 
     os.system('yum -y install epel-release ')
-    os.system('yum install bind-utils db4-utils db4 vsftpd -y')
+    os.system('yum install bind-utils db4-utils db4 lftp vsftpd -y')
 
 
-    with open('vsftpd_virtual','w') as file:
+    with open('/etc/pam.d/vsftpd_virtual','w') as file:
         file.write('#%PAM-1.0\n')
         file.write('auth    required        pam_userdb.so   db=/etc/vsftpd/virtual_users\n')
         file.write('account required        pam_userdb.so   db=/etc/vsftpd/virtual_users\n')
@@ -17,7 +17,7 @@ def install():
     os.system('mv /etc/vsftpd/vsftpd.conf  /etc/vsftpd/vsftpd.conf.bak')
 
     os.system('cp /root/vsftp/vsftpd.conf /etc/vsftpd/')
-    os.system('systemctl vsftpd restart')
+    os.system('systemctl restart vsftpd')
 
 
     print('Install done!!!')
@@ -31,17 +31,17 @@ def create_use():
 
     print("Remember this info, it's account ftp")
 
-    with open('/etc/vsftpd/virtual_user.txt', 'a+') as user:
+    with open('/etc/vsftpd/virtual_users.txt', 'a+') as user:
         user.write(name + '\n')
         user.write(pas + '\n')
         user.close()
 
-    os.system('db_load -T -t hash -f /etc/vsftpd/virtual_user.txt /etc/vsftpd/virtual_user.db')
+    os.system('db_load -T -t hash -f /etc/vsftpd/virtual_users.txt /etc/vsftpd/virtual_users.db')
 
 
     os.system('mkdir -p /ftp/virtual/'+name)
 
-    os.system('chown -R' +name+':ftp /ftp/virtual/'+name+'/')
+    os.system('chown -R '+name+':ftp /ftp/virtual/'+name+'/')
 
 def quit():
 
@@ -60,6 +60,7 @@ while True :
     elif n == 2:
         #print('2222222222222222222')
         create_use()
+        print('Create user done')
 
     elif n == 3:
         quit()
