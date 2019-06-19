@@ -33,27 +33,24 @@ Chroot trên các hệ điều hành Unix là một công đoạn thay đổi th
     
 - Sau khi cài đặt python xong file shell sẽ tự đông gọi đến file Python để cài VSFTP
      
-![image](https://user-images.githubusercontent.com/19284401/59593451-2bb67380-911c-11e9-8b8b-ff32b245336b.png)
+    ![image](https://user-images.githubusercontent.com/19284401/59593451-2bb67380-911c-11e9-8b8b-ff32b245336b.png)
 
  - Nhập 1 rồi Enter để cài đặt mới.
  
- ![image](https://user-images.githubusercontent.com/19284401/59593662-8c45b080-911c-11e9-8334-8be847e536ef.png)
+    ![image](https://user-images.githubusercontent.com/19284401/59593662-8c45b080-911c-11e9-8334-8be847e536ef.png)
 
 - Quá trình cài đặt VSFTP bắt đầu
 
     - Trong quá trình cài đặt hệ thống sẽ cài đặt luôn ssl. Các bạn làm theo hướng dẫn
 
-![image](https://user-images.githubusercontent.com/19284401/59733017-a0052a00-9276-11e9-85e0-8fd3a9d9a1dc.png)
+    ![image](https://user-images.githubusercontent.com/19284401/59733017-a0052a00-9276-11e9-85e0-8fd3a9d9a1dc.png)
          
-     
-
-
-![image](https://user-images.githubusercontent.com/19284401/59593900-fe1dfa00-911c-11e9-99bb-80c572497ab8.png)
+    ![image](https://user-images.githubusercontent.com/19284401/59593900-fe1dfa00-911c-11e9-99bb-80c572497ab8.png)
 
 
 - Quá trình cài đặt diễn ra rất nhanh. Đồng thời sẽ hiển thị ra ip public của bạn. IP nhé sẽ liên quan đến viêc các bạn NAT port vs ip này.
 
-![image](https://user-images.githubusercontent.com/19284401/59594224-a59b2c80-911d-11e9-933f-a7a1e8f7ff56.png)
+    ![image](https://user-images.githubusercontent.com/19284401/59594224-a59b2c80-911d-11e9-933f-a7a1e8f7ff56.png)
 
 - IP public sẽ được input vào file cấu hình.
     - Các bạn chú ý đến
@@ -78,23 +75,23 @@ Chroot trên các hệ điều hành Unix là một công đoạn thay đổi th
     
     - Test tài khoản ftp:
         
-        ![image](https://user-images.githubusercontent.com/19284401/59596532-18a6a200-9122-11e9-9d57-4701062ef11e.png)
+    ![image](https://user-images.githubusercontent.com/19284401/59596532-18a6a200-9122-11e9-9d57-4701062ef11e.png)
         
     - Đây là các command user hỗ trợ
         
-        ![image](https://user-images.githubusercontent.com/19284401/59596631-4ab80400-9122-11e9-9a09-d3ccdc1b9254.png)
+    ![image](https://user-images.githubusercontent.com/19284401/59596631-4ab80400-9122-11e9-9a09-d3ccdc1b9254.png)
         
     - Test upload bằng fileZilla
         
         - Các bạn chút ý khi đăng nhập bằng Filezilla nhớ tich chọn **Always trust** như trong hình, rOKồi nn **OK**.
     
-        ![image](https://user-images.githubusercontent.com/19284401/59733193-3afe0400-9277-11e9-8572-072497caea4c.png)
+    ![image](https://user-images.githubusercontent.com/19284401/59733465-2bcb8600-9278-11e9-88e5-ea04634ae245.png)
     
-        ![image](https://user-images.githubusercontent.com/19284401/59596939-ddf13980-9122-11e9-8485-4920981fdd94.png)
+    ![image](https://user-images.githubusercontent.com/19284401/59596939-ddf13980-9122-11e9-8485-4920981fdd94.png)
         
-        ![image](https://user-images.githubusercontent.com/19284401/59597003-ffeabc00-9122-11e9-9c1f-f2b3f24317b9.png)
+    ![image](https://user-images.githubusercontent.com/19284401/59597003-ffeabc00-9122-11e9-9c1f-f2b3f24317b9.png)
         
-        ![image](https://user-images.githubusercontent.com/19284401/59597045-198c0380-9123-11e9-9d40-9958fd474d2a.png)
+    ![image](https://user-images.githubusercontent.com/19284401/59597045-198c0380-9123-11e9-9d40-9958fd474d2a.png)
 
 - Nhập 3 để xóa tài khoản
 
