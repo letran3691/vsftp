@@ -1,6 +1,11 @@
 #!/usr/local/bin/python3.6
 import os,fileinput,time,subprocess
 
+def quit():
+
+    exit(0)
+
+
 def install():
 
     os.system('yum -y install epel-release ')
@@ -16,21 +21,61 @@ def install():
 
     os.system('cp -f /root/vsftp/vsftpd.conf /etc/vsftpd/')
 
+    print('config ssl')
+    time.sleep(3)
+    os.system('mkdir /etc/ssl/private')
+    os.system('openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.key -out /etc/ssl/certs/vsftpd.crt')
+
     ip = subprocess.check_output('dig +short myip.opendns.com @resolver1.opendns.com',shell=True,universal_newlines=True)
 
     print('Your ip public: ',ip)
 
-    with fileinput.FileInput('/etc/vsftpd/vsftpd.conf', inplace=True,backup=False) as  f:
-        for line in f:
-            print(line.replace('pasv_address=','pasv_address='+ip),end='')
-        f.close()
+    add = ''
 
-    os.system('systemctl restart vsftpd')
+    while add != 'q':
+
+        print('Enter 1 use ip public.')
+        print('Enter 2 use hostname.')
+        print('Enter q exit.\n')
+
+        add = input('Enter option: ')
+
+        if add == '1':
+
+            with fileinput.FileInput('/etc/vsftpd/vsftpd.conf', inplace=True,backup=False) as  f:
+                for line in f:
+                    print(line.replace('pasv_address=','pasv_address='+ip),end='')
+                f.close()
+
+        elif add == '2':
+
+            domain = input('Enter your domain:')
+
+            with open('/etc/vsftpd/vsftpd.conf', 'a+') as f1:
+                f1.write('pasv_addr_resolve=YES')
+                f1.close()
+
+            with fileinput.FileInput('/etc/vsftpd/vsftpd.conf', inplace=True, backup=False) as  f:
+                for line in f:
+                    print(line.replace('pasv_address=', 'pasv_address=' + domain), end='')
+                f.close()
 
 
-    print('Install done!!!')
-    time.sleep(4)
-    exit(0)
+        elif add == 'q':
+
+            quit()
+
+
+        else:
+            print('\nOption error!!! Please chose again\n'.upper())
+
+
+
+        os.system('systemctl restart vsftpd')
+
+
+        print('\nInstall done!!! Press q to exit\n'.title())
+
 
 def create_use():
 
@@ -56,33 +101,28 @@ def del_use():
 
     os.system("rm -rf /ftp/virtual/"+name)
 
-def quit():
+n = ''
 
-    exit(0)
-
-while True :
+while n != 'q' :
     print('\nEnter 1 to install vsftp')
     print('Enter 2 to create user ftp')
     print('Enter 3 to delete user ftp')
-    print('Enter 4 to exit\n')
+    print('Enter q to exit\n')
 
-    n = int(input('\nPlease enter function: '))
-    if n == 1:
+    n = input('\nPlease enter function: ')
+    if n == '1':
         install()
 
-    elif n == 2:
+    elif n == '2':
         create_use()
-        print('\nCreate user done!!!')
+        print('\nCreate user done!!!\n')
 
     elif n == 3:
         del_use()
-        print('\nDelete user done!!!')
+        print('\nDelete user done!!!\n')
 
-    elif n == 4:
+    elif n == 'q':
         quit()
 
     else:
-        print('\nOption error!!! Please chose again\n')
-
-
-
+        print('\nOption error!!! Please chose again\n'.upper())

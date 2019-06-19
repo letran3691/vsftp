@@ -41,6 +41,13 @@ Chroot trên các hệ điều hành Unix là một công đoạn thay đổi th
 
 - Quá trình cài đặt VSFTP bắt đầu
 
+    - Trong quá trình cài đặt hệ thống sẽ cài đặt luôn ssl. Các bạn làm theo hướng dẫn
+
+![image](https://user-images.githubusercontent.com/19284401/59733017-a0052a00-9276-11e9-85e0-8fd3a9d9a1dc.png)
+         
+     
+
+
 ![image](https://user-images.githubusercontent.com/19284401/59593900-fe1dfa00-911c-11e9-99bb-80c572497ab8.png)
 
 
@@ -78,6 +85,10 @@ Chroot trên các hệ điều hành Unix là một công đoạn thay đổi th
         ![image](https://user-images.githubusercontent.com/19284401/59596631-4ab80400-9122-11e9-9a09-d3ccdc1b9254.png)
         
     - Test upload bằng fileZilla
+        
+        - Các bạn chút ý khi đăng nhập bằng Filezilla nhớ tich chọn **Always trust** như trong hình, rOKồi nn **OK**.
+    
+        ![image](https://user-images.githubusercontent.com/19284401/59733193-3afe0400-9277-11e9-8572-072497caea4c.png)
     
         ![image](https://user-images.githubusercontent.com/19284401/59596939-ddf13980-9122-11e9-8485-4920981fdd94.png)
         
@@ -95,7 +106,8 @@ Chroot trên các hệ điều hành Unix là một công đoạn thay đổi th
     
     ![image](https://user-images.githubusercontent.com/19284401/59597399-ef871100-9123-11e9-8e98-a1afbe16f0a2.png)
     
-    - Trường hợp các bạn không muốn xóa thư mục đó đi thì các bạn chỉ cần phần quyền lại cho thư mục là được.
+
+   - Trường hợp các bạn không muốn xóa thư mục đó đi thì các bạn chỉ cần phần quyền lại cho thư mục là được.
             
             chmod -R root: /ftp/virtual/trunglv/
             
