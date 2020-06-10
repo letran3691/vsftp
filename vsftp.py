@@ -21,10 +21,11 @@ def install():
 
     os.system('cp -f /root/vsftp/vsftpd.conf /etc/vsftpd/')
 
-    print('config ssl')
+    print('sql ssl')
     time.sleep(3)
     os.system('mkdir /etc/ssl/private')
-    os.system('openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.key -out /etc/ssl/certs/vsftpd.crt')
+    #os.system('openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.key -out /etc/ssl/certs/vsftpd.crt')
+    os.system('openssl req -new -nodes -days 365 -newkey rsa:4096 -keyout /etc/ssl/private/vsftpd.key -out /etc/ssl/certs/vsftpd.crt -subj "/C=VN/ST=HN/L=HD/O=Dis/CN=vsftp.local"')
 
     ip = subprocess.check_output('dig +short myip.opendns.com @resolver1.opendns.com',shell=True,universal_newlines=True)
 
