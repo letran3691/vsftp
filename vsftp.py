@@ -21,7 +21,7 @@ def install():
 
     os.system('cp -f /root/vsftp/vsftpd.conf /etc/vsftpd/')
 
-    print('sql ssl')
+    print('create open ssl')
     time.sleep(3)
     os.system('mkdir /etc/ssl/private')
     #os.system('openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.key -out /etc/ssl/certs/vsftpd.crt')
