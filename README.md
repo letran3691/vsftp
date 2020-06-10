@@ -41,14 +41,11 @@ Chroot trên các hệ điều hành Unix là một công đoạn thay đổi th
 
 - Quá trình cài đặt VSFTP bắt đầu
 
-    - Trong quá trình cài đặt hệ thống sẽ cài đặt luôn ssl. Các bạn làm theo hướng dẫn
-
-    ![image](https://user-images.githubusercontent.com/19284401/59733017-a0052a00-9276-11e9-85e0-8fd3a9d9a1dc.png)
-         
-    ![image](https://user-images.githubusercontent.com/19284401/59593900-fe1dfa00-911c-11e9-99bb-80c572497ab8.png)
+   
+   ![image](https://user-images.githubusercontent.com/19284401/59593900-fe1dfa00-911c-11e9-99bb-80c572497ab8.png)
 
 
-- Quá trình cài đặt diễn ra rất nhanh. Đồng thời sẽ hiển thị ra ip public của bạn. IP nhé sẽ liên quan đến viêc các bạn NAT port vs ip này.
+- Quá trình cài đặt diễn ra rất nhanh. Đồng thời sẽ hiển thị ra ip public của bạn. IP này sẽ liên quan đến viêc các bạn NAT port vs ip này.
 
     ![image](https://user-images.githubusercontent.com/19284401/59594224-a59b2c80-911d-11e9-933f-a7a1e8f7ff56.png)
 
